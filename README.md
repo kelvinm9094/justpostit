@@ -8,6 +8,8 @@ Add images to a shared photo board.
 
 View and manage their personal profiles.
 
+Populated with random users and images 
+
 Features
 
 Google Authentication: Seamless and secure login using Google accounts, powered by NextAuth.
