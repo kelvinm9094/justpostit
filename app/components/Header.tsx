@@ -21,7 +21,7 @@ function Header() {
     const saveUserInfo=async()=>{
       if(session?.user)
       {
-        await setDoc(doc(db, "user", session.user.email!), {
+        await setDoc(doc(db, "user", session.user.email || ""), {
           userName: session.user.name,
           email: session.user.email,
           userImage: session.user.image
@@ -61,6 +61,7 @@ function Header() {
         {session?.user ? (
           <Image
             src={session.user.image || "/userimage.png"}
+            onClick={()=>router.push('/'+(session?.user?.email || ''))}
             alt="user"
             width={50}
             height={50}
